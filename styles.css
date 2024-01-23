@@ -1,0 +1,48 @@
+body{
+    background-color: darkgray;
+}
+
+.navbar{
+    background-color: #1A4649;
+    color: #F4B554;
+}
+
+.navbar-brand{
+    color: #F4B554 !important;
+    font-family: 'Racing Sans One', sans-serif;
+}
+
+.logo{
+    width: 75px;
+    height: 75px;
+}
+
+.masterhead{
+    background-image: url('./images/yellow\ motorbike\ banner\ -\ chw-2.png');
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+    color: white;
+    font-family: 'Racing Sans One', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+.color-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+}
+
+@media (max-width: 1000px) {
+    .masterhead{
+        min-height: 30vh;
+    }
+    h1{
+        font-size: calc(1.525rem + 3.3vw);
+    }
+}
