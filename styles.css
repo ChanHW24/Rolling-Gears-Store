@@ -43,6 +43,14 @@ body{
 }
 
 /* Image Gallery */
+.container2{
+    overflow-x: hidden;
+}
+.image{
+    display: block;
+    width: 33%;
+    margin: 0 auto;
+}
 .thumbnail:hover{
     transform: translateY(-10px);
 }
