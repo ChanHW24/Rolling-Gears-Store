@@ -2,6 +2,7 @@ body{
     background-color: darkgray;
 }
 
+/* navbar */
 .navbar{
     background-color: #1A4649;
     color: #F4B554;
@@ -17,6 +18,7 @@ body{
     height: 75px;
 }
 
+/* Landing Image and Text */
 .masterhead{
     background-image: url('./images/yellow\ motorbike\ banner\ -\ chw-2.png');
     background-size: cover;
@@ -24,7 +26,7 @@ body{
     position: relative;
     color: white;
     font-family: 'Racing Sans One', sans-serif;
-    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    text-shadow: 2px 2px 2px rgba(0,0,0,1);
 }
 
 h1{
