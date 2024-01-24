@@ -61,6 +61,24 @@ body{
 }
 
 /* Footer */
+.footer{
+    background-color: #1A4649;
+
+}
+h2{
+    color: #F4B554 !important;
+    font-family: 'Racing Sans One', sans-serif;
+}
+.logo2{
+    width: 240px;
+    height: 240px;
+}
+.quote{
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Footer Bottom */
 .footerbottom{
     background-color: #1A4649;
     padding: 20px;
@@ -70,8 +88,8 @@ body{
     color: #F4B554;
 }
 .designer{
-    color: white;
-    opacity: 0.6;
+    color: black;
+    opacity: 0.65;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
