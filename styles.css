@@ -1,5 +1,6 @@
 body{
     background-color: darkgray;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -60,6 +61,17 @@ body{
     color: #1A4649;
 }
 
+/* About Us */
+.masterhead2{
+    background-image: url('./images/some\ motorsikal\ banners\ -\ chw/6.png');
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+    color: white;
+    font-family: 'Racing Sans One', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0,0,0,1);
+}
+
 /* Footer */
 .footer{
     background-color: #1A4649;
@@ -78,6 +90,13 @@ h2{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Newsletter */
+@media (min-width: 768px){
+    .news-input{
+        width: 50%;
+    }
+}
+
 /* Footer Bottom */
 .footerbottom{
     background-color: #1A4649;
@@ -93,4 +112,15 @@ h2{
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
+}
+
+/* Contact Us Page */
+.masterhead3{
+    background-image: url('./images/some\ motorsikal\ banners\ -\ chw/7.png');
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+    color: white;
+    font-family: 'Racing Sans One', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0,0,0,1);
 }
