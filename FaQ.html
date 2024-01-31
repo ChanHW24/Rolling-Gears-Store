@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <!-- BootStrap CSS Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -47,6 +48,10 @@
                         <li class="nav-item">
                             <a href="contactUsPage.html" class="nav-link">Contact Us</a>
                         </li>
+                        
+                        <li class="nav-item">
+                            <a href="FaQ.html" class="nav-link">FAQs</a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="loginPage.html" class="nav-link">
@@ -76,77 +81,64 @@
         
     </header>
 
-    <br>
-    <br>
+    <!-- Question Accordion -->
+    <section id="questions" class="faq p-5">
+        <div class="container">
 
-    <div class="login text-center">
-        <h1>Login Page</h1>
-    </div>
+            <h1 class="text-center mb-4">Frequently Asked Questions</h1>
 
-    <!-- Login Box -->
-    <section>
-        <div class="container mt-5 text-center">
-            <div class="row">
-                <div class="col-12 col-sm-8 col-md-6 m-auto">
-                    <div class="card border-0 shadow">
-                        <div class="card-body">
+            <div class="accordion accordion-flush" id="quesitons">
 
-                            <!-- Profile Icon -->
-                            <svg class=" my-3" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                            </svg>
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#quesitons">
 
-                            <!-- Fill up Form -->
-                            <form action="">
-
-                                <!-- Email box -->
-                                <div class="form-group">
-                                    <label for="contact-email"></label>
-                                        <input type="email" id="contact-email" class="form-control" required placeholder="Email">
-                                </div>
-
-                                <!-- Password box -->
-                                <div class="form-group">
-                                    <label for="contact-text"></label>
-                                        <input type="text" id="contact-text" class="form-control" required placeholder="Password">
-                                </div>
-
-                                <!-- Checkbox -->
-                                <div class="checkbox mt-2">
-                                    <label>
-                                        <input type="checkbox" value="remember-me"> Remember Me
-                                    </label>
-                                </div>
-
-                                <!-- Login Button -->
-                                <button type="submit" id="contact-submit" class="btn btn-success mt-3 mb-3">Login</button>
-
-                            </form>
-
-                        </div>
+                    <div class="accordion-body">
+                        Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.
                     </div>
+                    
+                  </div>
                 </div>
-            </div>
+
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Accordion Item #2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+
+              </div>
         </div>
     </section>
-
-    <br>
-    <br>
-    <br>
-
-    <!-- Promo Banner -->
-    <img href="#" src="./images/Main helmet collection banner website - chw.png" class="img-fluid" alt="an image">
 
     <footer>
 
         <!-- Footer Bar -->
         <div class="footer navbar-dark pt-5 pb-4">
-
             <div class="container3 text-center text-md-left">
-
                 <div class="row text-center text-md-left">
-
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
 
                         <!-- Logo & Quote -->
@@ -194,13 +186,9 @@
                             </li>
     
                         </ul>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
 
         <!-- Newsletter -->
@@ -226,11 +214,7 @@
 
     </footer>
 
-    <!-- Lottie Animation -->
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <!-- BootStrap Javascript Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- Javascript -->
-    <script src="script.js"></script>
 </body>
 </html>

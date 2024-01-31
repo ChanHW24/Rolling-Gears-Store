@@ -3,6 +3,18 @@ body{
     overflow-x: hidden;
 }
 
+/* Preloader */
+#preloader{
+    background: white no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Navbar */
 .navbar{
     background-color: #1A4649;
@@ -61,15 +73,16 @@ body{
     color: #1A4649;
 }
 
-/* About Us */
-.masterhead2{
-    background-image: url('./images/some\ motorsikal\ banners\ -\ chw/6.png');
-    background-size: cover;
-    min-height: 90vh;
-    position: relative;
-    color: white;
-    font-family: 'Racing Sans One', sans-serif;
-    text-shadow: 2px 2px 2px rgba(0,0,0,1);
+/* Newsletter */
+.news{
+    background-color: #F4B554;
+    border: px solid white;
+}
+.news-word{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #1A4649;
+    font-weight: bold;
 }
 
 /* Footer */
@@ -90,13 +103,6 @@ h2{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Newsletter */
-@media (min-width: 768px){
-    .news-input{
-        width: 50%;
-    }
-}
-
 /* Footer Bottom */
 .footerbottom{
     background-color: #1A4649;
@@ -107,14 +113,25 @@ h2{
     color: #F4B554;
 }
 .designer{
-    color: black;
+    color: cyan;
     opacity: 0.65;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
 }
 
-/* Contact Us Page */
+/* About Us */
+.masterhead2{
+    background-image: url('./images/some\ motorsikal\ banners\ -\ chw/6.png');
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+    color: white;
+    font-family: 'Racing Sans One', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0,0,0,1);
+}
+
+/* Contact Us */
 .masterhead3{
     background-image: url('./images/some\ motorsikal\ banners\ -\ chw/7.png');
     background-size: cover;
@@ -123,4 +140,16 @@ h2{
     color: white;
     font-family: 'Racing Sans One', sans-serif;
     text-shadow: 2px 2px 2px rgba(0,0,0,1);
+}
+
+/* Login */
+.login h1{
+    color: #1A4649;
+    font-family: 'Racing Sans One', sans-serif;
+}
+
+/* FAQs */
+.faq h1{
+    color: #1A4649;
+    font-family: 'Racing Sans One', sans-serif;
 }
