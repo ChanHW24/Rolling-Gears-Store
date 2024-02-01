@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Create AJAX setting
         let settings = {
-            method: "POST",
+            method: "GET",
             headers: {
               "Content-Type": "application/json",
               "x-apikey": APIKEY,
