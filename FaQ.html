@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rolling Gears Shop</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="Normalize.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <!-- BootStrap CSS Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="script.js"></script>
 </head>
 
 <body>
+
+    <!-- Preloader Animation -->
+    <div id="preloader">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+        <dotlottie-player src="https://lottie.host/d4060201-25bf-4d90-9a4c-fdbb7b97ecea/NnTm7GnMF2.json" background="transparent" speed="1" style="width: 900px; height: 900px;" loop autoplay></dotlottie-player>
+    </div>
 
     <header>
 
@@ -42,6 +50,10 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="productPage.html" class="nav-link">Products</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="aboutUs.html" class="nav-link">About Us</a>
                         </li>
 
@@ -51,6 +63,10 @@
                         
                         <li class="nav-item">
                             <a href="FaQ.html" class="nav-link">FAQs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="rewardPage.html" class="nav-link">Rewards</a>
                         </li>
 
                         <li class="nav-item">
@@ -101,7 +117,7 @@
                     <div class="accordion-body">
                         Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.
                     </div>
-                    
+
                   </div>
                 </div>
 
@@ -137,8 +153,11 @@
 
         <!-- Footer Bar -->
         <div class="footer navbar-dark pt-5 pb-4">
+
             <div class="container3 text-center text-md-left">
+
                 <div class="row text-center text-md-left">
+
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
 
                         <!-- Logo & Quote -->
@@ -151,6 +170,10 @@
                             <li class="nav-item">
                                 <a href="index.html" class="nav-link">Home</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a href="productPage.html" class="nav-link">Products</a>
+                            </li>
     
                             <li class="nav-item">
                                 <a href="aboutUs.html" class="nav-link">About Us</a>
@@ -162,6 +185,10 @@
 
                             <li class="nav-item">
                                 <a href="FaQ.html" class="nav-link">FAQs</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="rewardPage.html" class="nav-link">Rewards</a>
                             </li>
     
                             <li class="nav-item">
@@ -186,9 +213,13 @@
                             </li>
     
                         </ul>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
 
         <!-- Newsletter -->
@@ -214,7 +245,11 @@
 
     </footer>
 
+    <!-- Lottie Animation -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <!-- BootStrap Javascript Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Javascript -->
+    <script src="script.js"></script>
 </body>
 </html>

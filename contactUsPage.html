@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rolling Gears Shop</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="Normalize.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <!-- BootStrap CSS Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="script.js"></script>
 </head>
 
 <body>
+
+    <!-- Preloader Animation -->
+    <div id="preloader">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+        <dotlottie-player src="https://lottie.host/d4060201-25bf-4d90-9a4c-fdbb7b97ecea/NnTm7GnMF2.json" background="transparent" speed="1" style="width: 900px; height: 900px;" loop autoplay></dotlottie-player>
+    </div>
 
     <header>
 
@@ -42,11 +50,23 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="productPage.html" class="nav-link">Products</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="aboutUs.html" class="nav-link">About Us</a>
                         </li>
 
                         <li class="nav-item">
                             <a href="contactUsPage.html" class="nav-link">Contact Us</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="FaQ.html" class="nav-link">FAQs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="rewardPage.html" class="nav-link">Rewards</a>
                         </li>
 
                         <li class="nav-item">
@@ -77,12 +97,85 @@
         
     </header>
 
-        <!-- Background Photo -->
-        <div class="masterhead3">
-            <div class="color-overlay d-flex justify-content-center align-items-center text-center">
-                <h1>Contact Us</h1>
-            </div>
+    <!-- Background Photo -->
+    <div class="masterhead3">
+        <div class="color-overlay d-flex justify-content-center align-items-center text-center">
+            <h1>Contact Us</h1>
         </div>
+    </div>
+
+    <!-- Contacts -->
+    <div class="contact page-hero d-flex align-items-center justify-content-center m-5">
+        <h3 class="text-center text-justify">Contact Personnel</h3>
+    </div>
+
+    <!-- Contact Peronnels (Ain)-->
+    <div class="container text-center mb-5 d-flex align-items-center justify-content-center">
+        <div class="row">
+            <div class="col">
+            
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Ain</p>
+                    </div>
+                </div>
+
+            </div>
+
+          <div class="col contactdetails">
+                <p>
+                    Contact Number:
+                    <br>
+                    +65 8571 7104
+                    <br>
+                    <br>
+                    Email:
+                    <br>
+                    s10241725@connect.np.edu.sg
+                </p>
+          </div>
+
+        </div>
+    </div>
+
+    <!-- Contact Peronnels (Hong Wei)-->
+    <div class="container text-center mb-5 d-flex align-items-center justify-content-center">
+        <div class="row">
+            <div class="col">
+            
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <p class="card-text">Hong Wei</p>
+                    </div>
+                </div>
+
+            </div>
+
+          <div class="col contactdetails">
+                <p>
+                    Contact Number:
+                    <br>
+                    +65 8787 0024
+                    <br>
+                    <br>
+                    Email:
+                    <br>
+                    S10262816@connect.np.edu.sg
+                </p>
+          </div>
+          
+        </div>
+    </div>
+
+    <!-- Picture of Map -->
+    <img src="./images/Google Map of NP.jpg" class="img-fluid mb-4" alt="an image of Ngee Ann poly in Google maps">
+
+    <!-- NP Address -->
+    <div class="contact page-hero d-flex align-items-center justify-content-center mb-5">
+        <h4 class="text-center text-justify"><u>Address:</u> 535 Clementi Rd, Singapore 599489</h4>
+    </div>
 
     <footer>
 
@@ -105,6 +198,10 @@
                             <li class="nav-item">
                                 <a href="index.html" class="nav-link">Home</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a href="productPage.html" class="nav-link">Products</a>
+                            </li>
     
                             <li class="nav-item">
                                 <a href="aboutUs.html" class="nav-link">About Us</a>
@@ -112,6 +209,14 @@
     
                             <li class="nav-item">
                                 <a href="contactUsPage.html" class="nav-link">Contact Us</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="FaQ.html" class="nav-link">FAQs</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="rewardPage.html" class="nav-link">Rewards</a>
                             </li>
     
                             <li class="nav-item">
@@ -145,6 +250,22 @@
 
         </div>
 
+        <!-- Newsletter -->
+        <section class=" text-light p-4 news">
+            <div class="container">
+                <div class="d-md-flex justify-content-between-align-items-center">
+
+                    <h3 class="mb-3 mb-md-0 news-word">Sign Up For Our Newsletter</h3>
+
+                    <div class="input-group news-input">
+                        <input type="text" class="form-control" placeholder="Enter Email">
+                        <button class="btn btn-dark btn-lg" type="button" id="button-addon2">Sign Up</button>
+                    </div>
+                      
+                </div>
+            </div>
+        </section>
+
         <!-- Copyright -->
         <div class = "footerbottom text-center">
             <p>Copyright &copy;2024: Designed by <span class = "designer">Ain and Hong Wei</span></p>
@@ -152,7 +273,11 @@
 
     </footer>
 
+    <!-- Lottie Animation -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <!-- BootStrap Javascript Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Javascript -->
+    <script src="script.js"></script>
 </body>
 </html>
