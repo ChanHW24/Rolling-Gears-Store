@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
             "email": contactEmail,
             "text": contactText,
         };
-
+    /*
         // Create AJAX setting
         let settings = {
-            method: "GET",
+            method: "POST",
             headers: {
               "Content-Type": "application/json",
               "x-apikey": APIKEY,
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
               document.getElementById("add-contact-form").reset();
             }
         }
-
+        */
         // Fetch data
         fetch("https://rollinggearstore-6adf.restdb.io/rest/login", settings)
             .then(response => response.json())
