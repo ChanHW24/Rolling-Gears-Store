@@ -130,6 +130,63 @@ h2{
     font-family: 'Racing Sans One', sans-serif;
     text-shadow: 2px 2px 2px rgba(0,0,0,1);
 }
+.aboutus {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+
+  .aboutus h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+    font-family: 'Racing Sans One', sans-serif;
+    color: #1A4649;
+  }
+  
+  .aboutus h5{
+    color: #1A4649;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .aboutus p {
+    text-align: justify;
+    line-height: 1.5;
+    color: #666666;
+  }
+
+  .section3 {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .section-content {
+    font-size: 16px;
+    color: #666666;
+  }
+
+  .image-container3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .image-container3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  .image-container4 {
+      float: right;
+      margin-left: -1000px;
+  }
 
 /* Contact Us */
 .masterhead3{
@@ -172,3 +229,27 @@ h2{
     font-weight: bold;
     color: #1A4649;
 }
+.address:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Product Page */
+.tittle h3{
+    display: flex;
+    text-align: left;
+    font-size: 80px;
+    font-family: inherit;
+    color:#1A4649;
+    text-decoration: underline;
+}
+.description p{
+    text-align: left;
+}
+
+/* Rewards Page */
+.reward h1{
+    color: #1A4649;
+    font-family: 'Racing Sans One', sans-serif;
+}
+
