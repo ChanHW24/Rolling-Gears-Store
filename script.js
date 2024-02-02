@@ -36,12 +36,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         fetch("https://rollinggearstore-6adf.restdb.io/rest/login", settings)
-            .then(response => response.json())
-            .then(response => {
-                console.log('response');
+        .then(response => response.json())
+        .then(response => {
+            console.log('response');
 
-            })
+            const matchingUser = response.find(user => user.email === contactEmail && user.password === contactText);
 
+            if (matchingUser) {
+                console.log('Login successful');
+                // Redirect to the dashboard or perform other actions
+            } else {
+                console.log('Invalid email or password');
+                // Display an error message to the user
+            }
+        })
     });
 
     /*
