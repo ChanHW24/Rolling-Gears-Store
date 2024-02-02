@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         fetch("https://rollinggearstore-6adf.restdb.io/rest/login", settings)
-            .then(response => json())
+            .then(response => response.json())
             .then(response => {
                 console.log('response');
 
