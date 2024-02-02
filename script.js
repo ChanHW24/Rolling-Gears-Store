@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (matchingUser) {
                 console.log('Login successful');
-                // Redirect to the dashboard or perform other actions
+                // Display a successful message to the user
+                window.location.href = "profile.html";
             } else {
                 console.log('Invalid email or password');
                 // Display an error message to the user
