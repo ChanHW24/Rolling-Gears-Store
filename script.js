@@ -25,35 +25,26 @@ document.addEventListener("DOMContentLoaded", function () {
             "email": contactEmail,
             "text": contactText,
         };
-    
-        // Create AJAX setting
+
         let settings = {
-            method: "POST",
+            method: "GET", 
             headers: {
               "Content-Type": "application/json",
               "x-apikey": APIKEY,
               "Cache-Control": "no-cache"
             },
-            body: JSON.stringify(jsondata),
-            beforeSend: function () {
-              // Disable our button or show loading bar
-              document.getElementById("contact-submit").disabled = true;
-              // Clear our form using the form ID and triggering its reset feature
-              document.getElementById("add-contact-form").reset();
-            }
         }
-        
-        // Fetch data
+
         fetch("https://rollinggearstore-6adf.restdb.io/rest/login", settings)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                document.getElementById("contact-submit").disabled = false;
-                getContacts();
-            });
+            .then(response => jsondata())
+            .then(response => {
+                console.log('response');
+                
+            })
 
     });
 
+    /*
     function getContacts(limit = 10, all = true) {
 
         // Create AJAX setting
@@ -88,5 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
     }
+    */
 
 });
