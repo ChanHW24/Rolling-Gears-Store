@@ -1,9 +1,11 @@
 
-// Preloader
+// Preloader Lottie animation
 var loader = document.getElementById("preloader");
 setTimeout(function(){
     loader.style.display = "none";
-}, 1300);
+}, 1250);
+
+
 
 // API
 document.addEventListener("DOMContentLoaded", function () {
@@ -46,10 +48,62 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log('Login successful');
                 // Display a successful message to the user
                 window.location.href = "profile.html";
+                // Open the intended file if credentials are right
             } else {
                 console.log('Invalid email or password');
                 // Display an error message to the user
             }
         })
     });
+
+    // Newsletter Button
+    var signUpBtn = document.getElementById('newsletter-submit');
+    signUpBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log('button clicked');
+
+        let newsEmail = document.getElementById("newsletter-email").value;
+
+        let jsondata = {
+            "email": newsEmail,
+        };
+
+        let settings = {
+            method: "POST", 
+            headers: {
+              "Content-Type": "application/json",
+              "x-apikey": APIKEY,
+              "Cache-Control": "no-cache"
+            },
+            body: JSON.stringify(jsondata),
+        };
+
+        fetch("https://rollinggearstore-6adf.restdb.io/rest/newsletter", settings)
+        .then(response => response.json())
+        .then(response => {
+            console.log('Sending...', response);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
 })
+
+
+
+// Product Page Img Effect
+var mainimg = document.getElementById('MainImg');
+var smallimg = document.getElementsByClassName('small-img');
+
+smallimg[0].onclick = function(){
+    mainimg.src = smallimg[0].src;
+}
+smallimg[1].onclick = function(){
+    mainimg.src = smallimg[1].src;
+}
+smallimg[2].onclick = function(){
+    mainimg.src = smallimg[2].src;
+}
+smallimg[3].onclick = function(){
+    mainimg.src = smallimg[3].src;
+}
