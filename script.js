@@ -151,20 +151,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Product Page Img Effect
-var mainimg = document.getElementById('MainImg');
-var smallimg = document.getElementsByClassName('small-img');
+// only run when in product page
+if (window.location.href.includes("productPage.html")) {
+    var mainimg = document.getElementById('MainImg');
+    var mainimg2 = document.getElementById('MainImg2');
+    var smallimg = document.getElementsByClassName('small-img');
 
-smallimg[0].onclick = function(){
-    mainimg.src = smallimg[0].src;
-}
-smallimg[1].onclick = function(){
-    mainimg.src = smallimg[1].src;
-}
-smallimg[2].onclick = function(){
-    mainimg.src = smallimg[2].src;
-}
-smallimg[3].onclick = function(){
-    mainimg.src = smallimg[3].src;
+    // First Product (race)
+    smallimg[0].onclick = function() {
+        mainimg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick = function() {
+        mainimg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick = function() {
+        mainimg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick = function() {
+        mainimg.src = smallimg[3].src;
+    }
+
+    // Second Product (tour)
+    smallimg[4].onclick = function() {
+        mainimg2.src = smallimg[4].src;
+    }
+    smallimg[5].onclick = function() {
+        mainimg2.src = smallimg[5].src;
+    }
+    smallimg[6].onclick = function() {
+        mainimg2.src = smallimg[6].src;
+    }
+    smallimg[7].onclick = function() {
+        mainimg2.src = smallimg[7].src;
+    }
 }
 
 
@@ -174,15 +193,15 @@ let carts = document.querySelectorAll('.add-cart');
 
 let products = [
     {
-        name: 'tour',
-        tag: 'gtair',
-        price: '800',
+        name: 'SHOEI X-15',
+        tag: 'race helm',
+        price: '1000',
         inCart: 0
     },
     {
-        name: 'race',
-        tag: 'x15',
-        price: '1000',
+        name: 'SHOEI GT-Air II',
+        tag: 'tour helm',
+        price: '800',
         inCart: 0
     },
     {
@@ -194,11 +213,11 @@ let products = [
 ]
 
 for (let i=0; i < carts.length; i++) {
-    console.log("my loop");
     carts[i].addEventListener('click', () => {
         console.log('added to cart!');
-        alert("Items added to cart!")
+        alert("Items added to cart!");
         cartNumbers(products[i]);
+        totalCost(products[i]);
     })
 }
 
@@ -211,8 +230,7 @@ function onLoadCartNumbers() {
     }
 }
 
-function cartNumbers(products) {
-    console.log('The product cliked is', products)
+function cartNumbers(product) {
     let productNumbers = localStorage.getItem('cartNumbers');
 
     productNumbers = parseInt(productNumbers);
@@ -226,6 +244,120 @@ function cartNumbers(products) {
         document.querySelector('.cart span').textContent = 1;
         document.querySelector('.cart2 span').textContent = 1;
     }
+
+    setItems(product);
+}
+
+function setItems(product) {
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    
+    if(cartItems != null) {
+
+        if(cartItems[product.tag] == undefined) {
+            cartItems = {
+                ...cartItems,
+                [product.tag]: product
+            }
+        }
+        cartItems[product.tag].inCart += 1;
+    } else {
+        product.inCart = 1;
+        cartItems = {
+            [product.tag]: product
+        }
+    }
+
+    localStorage.setItem("productsInCart", JSON.stringify
+    (cartItems));
+}
+
+function totalCost(product) {
+    let cartCost = localStorage.getItem('totalCost');
+
+    console.log("My cartCost is", cartCost);
+    console.log(typeof cartCost );
+    
+    if(cartCost != null) {
+        cartCost = parseInt(cartCost);
+        localStorage.setItem("totalCost", cartCost + 
+        product.price);
+    } else {
+        localStorage.setItem("totalCost", product.price);
+    }
+}
+
+function displayCart() {
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector
+    (".products");
+
+
+    console.log(cartItems);
+    if( cartItems && productContainer ) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+           productContainer.innerHTML += `
+           <div class="product">
+
+                <img src="./images/Helmets/${item.tag}.png">
+                <span>${item.name}</span>
+            </div>
+            <div class="price">$${item.price}</div>
+            <div class="quantity">
+                <ion-icon class="decrease" name="chevron-back-circle-outline"></ion-icon>
+                <span>${item.inCart}</span>
+                <ion-icon class="increase" name="chevron-forward-circle-outline"></ion-icon>
+            </div>
+            <div class="total">
+                $${item.inCart * item.price}
+            </div>
+           `;
+        });
+
+        productContainer.innerHTML += `
+            <div class="basketTotalContainer">
+                <h4 class="basketTotalTitle">
+                    Basket Total
+                </h4>
+                <h4 class="basketTotal">
+                    $${cartCost}
+                </h4>
+            </div>
+        `;
+
+    }
+}
+
+
+
+// checkout button message
+if (window.location.href.includes("cartPage.html")) {
+    var checkOutBtn = document.getElementById('checkout-submit');
+    if (checkOutBtn) {
+        checkOutBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log('Button clicked!');
+            if (localStorage.length === 0) {
+                alert("Cart is empty.");
+            } else {
+                alert("Check out successfully!!!");
+            }
+        });
+    };
+}
+
+
+
+// clear local storage button
+if (window.location.href.includes("cartPage.html")) {
+    function clearLocalStorage() {
+        localStorage.clear();
+        location.reload();
+        alert("Local Storage cleared successfully!");
+    }
 }
 
 onLoadCartNumbers();
+displayCart();
