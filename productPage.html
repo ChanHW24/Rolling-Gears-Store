@@ -103,12 +103,12 @@
     </header>
 
     <!-- Product text -->
-    <div class="ourproduct text-center mt-5">
-        <h6>Our Product</h6>
+    <div class="ourproduct text-center mt-5 mb-5">
+        <h1>Our Product</h1>
     </div>
 
     <!-- Product Image (race) -->
-    <section class="container sproduct my-5">
+    <section class="container sproduct my-5" id="item1">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
 
@@ -165,63 +165,105 @@
         </div>
     </section>
 
-        <!-- Product Image (tour) -->
-        <section class="container sproduct my-5">
-            <div class="row mt-5">
-                <div class="col-lg-5 col-md-12 col-12">
+    <!-- Auto Carousel -->
+    <div id="carouselExampleInterval" class="carousel slide mb-5" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="./images/GT AIR banner/GT AIR 1.png" class="d-block w-100" alt="...">
+          </div>
+
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./images/GT AIR banner/GT AIR 2.png" class="d-block w-100" alt="...">
+          </div>
+
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./images/GT AIR banner/GT AIR 3.png" class="d-block w-100" alt="...">
+          </div>
+
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="./images/GT AIR banner/GT AIR 4.png" class="d-block w-100" alt="...">
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="./images/GT AIR banner/GT AIR 5.png" class="d-block w-100" alt="...">
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Product Image (tour) -->
+    <section class="container sproduct my-5 mt-5" id="item2">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-12 col-12">
     
-                    <img class="img-fluid w-100 pb-5" src="./images/Helmets/shoei-gt-air-ii-black.png" id="MainImg2">
+                <img class="img-fluid w-100 pb-5" src="./images/Helmets/shoei-gt-air-ii-black.png" id="MainImg2">
     
-                    <div class="small-img-group mb-4">
+                <div class="small-img-group mb-4">
     
-                        <div class="small-img-col">
-                            <img src="./images/Helmets/shoei-gt-air-ii-blue.png" width="100%" class="small-img">
-                        </div>
-    
-                        <div class="small-img-col">
-                            <img src="./images/Helmets/shoei-gt-air-ii-darkgreen.png" width="100%" class="small-img">
-                        </div>
-    
-                        <div class="small-img-col">
-                            <img src="./images/Helmets/shoei-gt-air-ii-mattdeepgrey.png" width="100%" class="small-img">
-                        </div>
-    
-                        <div class="small-img-col">
-                            <img src="./images/Helmets/shoei-gt-air-ii-white.png" width="100%" class="small-img">
-                        </div>
-    
+                    <div class="small-img-col">
+                        <img src="./images/Helmets/shoei-gt-air-ii-blue.png" width="100%" class="small-img">
                     </div>
+    
+                    <div class="small-img-col">
+                        <img src="./images/Helmets/shoei-gt-air-ii-darkgreen.png" width="100%" class="small-img">
+                    </div>
+    
+                    <div class="small-img-col">
+                        <img src="./images/Helmets/shoei-gt-air-ii-mattdeepgrey.png" width="100%" class="small-img">
+                    </div>
+    
+                    <div class="small-img-col">
+                        <img src="./images/Helmets/shoei-gt-air-ii-white.png" width="100%" class="small-img">
+                    </div>
+    
                 </div>
+            </div>
     
-                <div class="producttext col-lg-6 col-md-12 col-12">
-                    <h6>Touring Helmets</h6>
-                    <h3><strong>SHOEI GT-Air II</strong></h3>
-                    <h2>$800</h2>
+            <div class="producttext col-lg-6 col-md-12 col-12">
+                <h6>Touring Helmets</h6>
+                <h3><strong>SHOEI GT-Air II</strong></h3>
+                <h2>$800</h2>
     
-                    <!-- choose size -->
-                    <select class="my-3">
-                        <option>Select Sizes</option>
-                        <option>XL</option>
-                        <option>L</option>
-                        <option>M</option>
-                        <option>S</option>
-                    </select>
+                <!-- choose size -->
+                <select class="my-3">
+                    <option>Select Sizes</option>
+                    <option>XL</option>
+                    <option>L</option>
+                    <option>M</option>
+                    <option>S</option>
+                </select>
     
-                    <!-- choose quanity -->
-                    <input type="number" value="1">
+                <!-- choose quanity -->
+                <input type="number" value="1">
                     
-                    <!-- add to cart button -->
-                    <button class="buy-btn btn btn-outline-success add-cart cart2">ADD TO CART</button>
+                <!-- add to cart button -->
+                <button class="buy-btn btn btn-outline-success add-cart cart2">ADD TO CART</button>
     
-                    <h4 class="mt-5">Product Details:</h4>
-                    <span>
-                        The Shoei GT-Air 2 is a premium full-face motorcycle helmet that offers style, comfort, and advanced technology. It has an aerodynamic design that minimizes drag and pressure on the rider's neck. The helmet is made with a Multi-Ply Matrix AIM shell, which enhances impact resistance. It also features a Multi-Piece/Multi-Density EPS liner for added impact absorption and ventilation. The GT-Air 2 has an internal sun shield and meets safety standards, including DOT and ANSI Z80.3-2010 for eye protection. It has an Emergency Quick Release System for easy helmet removal in emergencies. The helmet comes in various shell sizes and is compatible with a Bluetooth communication system. Overall, the Shoei GT-Air 2 is a popular choice for riders seeking a high-quality helmet that combines safety, comfort, and style. For more detailed information, it is recommended to refer to the official Shoei website or the product manual.
-                    </span>
-    
-                </div>
+                <h4 class="mt-5">Product Details:</h4>
+                 <span>
+                    The Shoei GT-Air 2 is a premium full-face motorcycle helmet that offers style, comfort, and advanced technology. It has an aerodynamic design that minimizes drag and pressure on the rider's neck. The helmet is made with a Multi-Ply Matrix AIM shell, which enhances impact resistance. It also features a Multi-Piece/Multi-Density EPS liner for added impact absorption and ventilation. The GT-Air 2 has an internal sun shield and meets safety standards, including DOT and ANSI Z80.3-2010 for eye protection. It has an Emergency Quick Release System for easy helmet removal in emergencies. The helmet comes in various shell sizes and is compatible with a Bluetooth communication system. Overall, the Shoei GT-Air 2 is a popular choice for riders seeking a high-quality helmet that combines safety, comfort, and style. For more detailed information, it is recommended to refer to the official Shoei website or the product manual.
+                </span>
     
             </div>
-        </section>
+    
+        </div>
+    </section>
 
     <!-- Auto Carousel -->
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -260,7 +302,7 @@
           <span class="visually-hidden">Next</span>
         </button>
 
-      </div>
+    </div>
 
     <!-- Related Products -->
     <div class="related text-center mt-5 mb-5">
@@ -275,7 +317,7 @@
                 <div class="thumbnail">
                     <div class="img-container">
 
-                        <a href="#">
+                        <a href="#item1">
                             <img src="./images/Helmets/shoei-x-15-matt-black.png" alt="..." class="image">
                         </a>
 
@@ -291,7 +333,7 @@
                 <div class="thumbnail">
                     <div class="img-container">
 
-                        <a href="#">
+                        <a href="#item2">
                             <img src="./images/Helmets/shoei-gt-air-ii-mattblack.png" alt="..." class="image">
                         </a>
 
@@ -307,7 +349,7 @@
                 <div class="thumbnail">
                     <div class="img-container">
 
-                        <a href="#">
+                        <a href="#item3">
                             <img src="./images/Helmets/shoei-neotec-ii-green.png" alt="..." class="image">
                         </a>
 
@@ -323,7 +365,7 @@
                 <div class="thumbnail">
                     <div class="img-container">
 
-                        <a href="#">
+                        <a href="#item4">
                             <img src="./images/Gloves/5027-000_Black_01_large.jpg.webp" alt="..." class="image">
                         </a>
                         
@@ -339,7 +381,7 @@
                 <div class="thumbnail">
                     <div class="img-container">
 
-                        <a href="#">
+                        <a href="#item5">
                             <img src="./images/Jackets/6029-002_StealthBlack_01_large.jpg.webp" alt="..." class="image">
                         </a>
 
@@ -355,7 +397,7 @@
                 <div class="thumbnail">
                     <div class="img-container">
 
-                        <a href="#">
+                        <a href="#item6">
                             <img src="./images/Boots/800px-brown_1604506475_large.jpg.webp" alt="..." class="image">
                         </a>
 
