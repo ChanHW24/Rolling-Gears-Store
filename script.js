@@ -359,5 +359,8 @@ if (window.location.href.includes("cartPage.html")) {
     }
 }
 
+
+
+// functions
 onLoadCartNumbers();
 displayCart();
