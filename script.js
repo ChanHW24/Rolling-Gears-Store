@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(response => {
                     console.log('Signup successful', response);
                     alert('Thank you for signing up!');
+                    window.location.href = "loginPage.html";
                 })
                 .catch(error => {
                     console.error('Signup error:', error);
@@ -134,10 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify(jsondata),
             };
 
-            fetch("https://rollinggearstore-6adf.restdb.io/rest/newsletter", settings)
+            fetch("https://rollinggearstore-6adf.restdb.io/rest/news-letter", settings)
             .then(response => response.json())
             .then(response => {
                 console.log('Sending...', response);
+                alert("Newsletter sign up successfull!")
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -166,3 +168,64 @@ smallimg[3].onclick = function(){
 }
 
 
+
+// Cart
+let carts = document.querySelectorAll('.add-cart');
+
+let products = [
+    {
+        name: 'tour',
+        tag: 'gtair',
+        price: '800',
+        inCart: 0
+    },
+    {
+        name: 'race',
+        tag: 'x15',
+        price: '1000',
+        inCart: 0
+    },
+    {
+        name: 'retro',
+        tag: 'retro helm',
+        price: '450',
+        inCart: 0
+    },
+]
+
+for (let i=0; i < carts.length; i++) {
+    console.log("my loop");
+    carts[i].addEventListener('click', () => {
+        console.log('added to cart!');
+        alert("Items added to cart!")
+        cartNumbers(products[i]);
+    })
+}
+
+function onLoadCartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    if(productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+        document.querySelector('.cart2 span').textContent = productNumbers;
+    }
+}
+
+function cartNumbers(products) {
+    console.log('The product cliked is', products)
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    productNumbers = parseInt(productNumbers);
+
+    if ( productNumbers ) {
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.cart span').textContent = productNumbers + 1;
+        document.querySelector('.cart2 span').textContent = productNumbers + 1;
+    } else {
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+        document.querySelector('.cart2 span').textContent = 1;
+    }
+}
+
+onLoadCartNumbers();
