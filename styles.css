@@ -136,6 +136,9 @@ h2{
     flex-basis: 24%;
     cursor: pointer;
 }
+.small-img-col:hover{
+    transform: translateY(-10px);
+}
 .sproduct select{
     display: block;
     padding: 5px 10px;
@@ -156,6 +159,10 @@ h2{
 .producttext h3{
     color: #1A4649;
     font-size: 79px;
+    font-family: 'Russo One', sans-serif;
+    font-style: italic;
+}
+.producttext h2{
     font-family: 'Russo One', sans-serif;
     font-style: italic;
 }
@@ -300,6 +307,12 @@ h2{
 
 /* Rewards Page */
 .reward h1{
+    color: #1A4649;
+    font-family: 'Racing Sans One', sans-serif;
+}
+
+/* SignUp Page */
+.signup h1{
     color: #1A4649;
     font-family: 'Racing Sans One', sans-serif;
 }
