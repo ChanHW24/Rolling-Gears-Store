@@ -9,7 +9,7 @@ setTimeout(function(){
 
 // API
 document.addEventListener("DOMContentLoaded", function () {
-    const APIKEY = "65b8e4bb3d3b7f9ac6c2656e";
+    const APIKEY = "65c3fbbc86354f9dcb46409a";
     
     // Login Button
     var loginBtn = document.getElementById('contact-submit');
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Store Email into localStorage
             localStorage.setItem('email', contactEmail);
-            console.log(localStorage);
+            console.log("The email saved is", localStorage.email);
 
             //Get form value
             let jsondata = {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
             }
             
-            fetch("https://rollinggearstore-6adf.restdb.io/rest/login-signup", settings)
+            fetch("https://rollinggearsstore-124c.restdb.io/rest/login-signup", settings)
             .then(response => response.json())
             .then(response => {
                 console.log('response');
@@ -65,40 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         })
     }
-
-    // Fetching Information from RestDB to display in profile page
-    if (window.location.href.includes("profile.html")) {
-        let settings = {
-            method: "GET", 
-            headers: {
-            "Content-Type": "application/json",
-            "x-apikey": APIKEY,
-            "Cache-Control": "no-cache"
-            },
-        }
-        
-        fetch("https://rollinggearstore-6adf.restdb.io/rest/login-signup", settings)
-        .then(response => response.json())
-        .then(response => {
-            console.log('response', response);
-
-            let email = localStorage.getItem('email');
-            console.log('email', email);
-
-            let found = false;
-            for (let i = 0; i < response.length; i++) {
-                if (response[i].email === email) {
-                    found = true;
-                    console.log('found', response[i]);
-                    
-                    document.getElementById('name').innerHTML = response[i].name;
-                    document.getElementById('number').innerHTML = response[i].number;
-                    document.getElementById('email').innerHTML = response[i].email;
-                    document.getElementById('password').innerHTML = response[i].password;
-                }
-            }
-        }
-    )};
     
     // Signup Button
     var signUpBtn = document.getElementById('signup-submit');
@@ -133,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             // Make the API call to signup
-            fetch("https://rollinggearstore-6adf.restdb.io/rest/login-signup", settings)
+            fetch("https://rollinggearsstore-124c.restdb.io/rest/login-signup", settings)
                 .then(response => {
                     if (!response.ok) throw new Error('Make sure all fields are filled out correctly. And leave no spacing for your contact number. Please try again.');
                     return response.json();
@@ -149,6 +115,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
         });
     }
+
+    // Fetching Information from RestDB to display in profile page
+    if (window.location.href.includes("profile.html")) {
+        let settings = {
+            method: "GET", 
+            headers: {
+            "Content-Type": "application/json",
+            "x-apikey": APIKEY,
+            "Cache-Control": "no-cache"
+            },
+        }
+        
+        fetch("https://rollinggearsstore-124c.restdb.io/rest/login-signup", settings)
+        .then(response => response.json())
+        .then(response => {
+            console.log('response', response);
+
+            let email = localStorage.getItem('email');
+            console.log('email', email);
+
+            let found = false;
+            for (let i = 0; i < response.length; i++) {
+                if (response[i].email === email) {
+                    found = true;
+                    console.log('found', response[i]);
+
+                    document.getElementById('name').innerHTML = response[i].name;
+                    document.getElementById('number').innerHTML = response[i].number;
+                    document.getElementById('email').innerHTML = response[i].email;
+                    document.getElementById('password').innerHTML = response[i].password;
+                };
+            };
+        }
+    )};
 
     // Newsletter Button
     var newsBtn = document.getElementById('newsletter-submit');
@@ -178,17 +178,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify(jsondata),
             };
 
-            fetch("https://rollinggearstore-6adf.restdb.io/rest/news-letter", settings)
+            fetch("https://rollinggearsstore-124c.restdb.io/rest/news-letter", settings)
             .then(response => response.json())
             .then(response => {
                 console.log('Sending...', response);
-                alert("Thank you for signing up!")
+                alert("Thank you for signing up!");
+                let clearBox = document.getElementById("newsletter-email");
+                clearBox.value = "";
             })
             .catch(error => {
                 console.error('Error:', error);
             });
         });
-    }
+    };
 })
 
 
