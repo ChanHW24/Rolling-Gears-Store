@@ -48,8 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (matchingUser) {
                     console.log('Login successful');
                     // Display a successful message to the user
-                    window.location.href = "profile.html";
-                    // Open the intended file if credentials are right
+                    if (document.getElementById("contact-email").value == "ain@ain.com") {
+                        window.location.href = "profile(ain).html";
+                    } else {
+                        window.location.href = "profile.html";
+                    }
                 } else {
                     console.log('Invalid email or password');
                     alert('Invalid Email or Password');
@@ -58,6 +61,24 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         })
     }
+
+    // Fetching Information from RestDB to display in profile page
+    if (window.location.href.includes("profile.html")) {
+        let settings = {
+            method: "GET", 
+            headers: {
+            "Content-Type": "application/json",
+            "x-apikey": APIKEY,
+            "Cache-Control": "no-cache"
+            },
+        }
+        
+        fetch("https://rollinggearstore-6adf.restdb.io/rest/login-signup", settings)
+        .then(response => response.json())
+        .then(response => {
+            console.log('response', response);
+        }
+    )};
     
     // Signup Button
     var signUpBtn = document.getElementById('signup-submit');
@@ -70,12 +91,14 @@ document.addEventListener("DOMContentLoaded", function () {
             let signupName = document.getElementById("signup-name").value;
             let signupEmail = document.getElementById("signup-email").value;
             let signupPassword = document.getElementById("signup-password").value;
+            let signupNumber = document.getElementById("signup-number").value;
 
             // Prepare JSON data for the API call
             let jsondata = {
                 "name": signupName,
                 "email": signupEmail,
-                "password": signupPassword
+                "password": signupPassword,
+                "number": signupNumber,
             };
 
             // Define settings for fetch call
@@ -92,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Make the API call to signup
             fetch("https://rollinggearstore-6adf.restdb.io/rest/login-signup", settings)
                 .then(response => {
-                    if (!response.ok) throw new Error('Network response was not ok');
+                    if (!response.ok) throw new Error('Make sure all fields are filled out correctly. And leave no spacing for your contact number.');
                     return response.json();
                 })
                 .then(response => {
@@ -139,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => response.json())
             .then(response => {
                 console.log('Sending...', response);
-                alert("Newsletter sign up successfull!")
+                alert("Thank you for signing up!")
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -436,6 +459,23 @@ if (window.location.href.includes("cartPage.html")) {
         alert("Cart cleared successfully!");
     }
 }
+
+
+
+// random number function
+if (window.location.href.includes("profile.html")) {
+    function generateRandomNumber() {
+        var minNumber = 100000; // The minimum number you want
+        var maxNumber = 10000000000; // The maximum number you want
+        var randomnumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber; // Generates random number
+        document.getElementById("random").innerHTML = randomnumber; // Displays the random number
+    }
+
+    generateRandomNumber();
+}
+
+
+// Profile dynamic information
 
 
 
