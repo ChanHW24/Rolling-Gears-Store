@@ -155,6 +155,10 @@ document.addEventListener("DOMContentLoaded", function () {
 if (window.location.href.includes("productPage.html")) {
     var mainimg = document.getElementById('MainImg');
     var mainimg2 = document.getElementById('MainImg2');
+    var mainimg3 = document.getElementById('MainImg3');
+    var mainimg4 = document.getElementById('MainImg4');
+    var mainimg5 = document.getElementById('MainImg5');
+    var mainimg6 = document.getElementById('MainImg6');
     var smallimg = document.getElementsByClassName('small-img');
 
     // First Product (race)
@@ -184,6 +188,62 @@ if (window.location.href.includes("productPage.html")) {
     smallimg[7].onclick = function() {
         mainimg2.src = smallimg[7].src;
     }
+
+    // Third Product (retro)
+    smallimg[8].onclick = function() {
+        mainimg3.src = smallimg[8].src;
+    }
+    smallimg[9].onclick = function() {
+        mainimg3.src = smallimg[9].src;
+    }
+    smallimg[10].onclick = function() {
+        mainimg3.src = smallimg[10].src;
+    }
+    smallimg[11].onclick = function() {
+        mainimg3.src = smallimg[11].src;
+    }
+
+    // Fourth Product (glove)
+    smallimg[12].onclick = function() {
+        mainimg4.src = smallimg[12].src;
+    }
+    smallimg[13].onclick = function() {
+        mainimg4.src = smallimg[13].src;
+    }
+    smallimg[14].onclick = function() {
+        mainimg4.src = smallimg[14].src;
+    }
+    smallimg[15].onclick = function() {
+        mainimg4.src = smallimg[15].src;
+    }
+
+    // Fifth Product (jacket)
+    smallimg[16].onclick = function() {
+        mainimg5.src = smallimg[16].src;
+    }
+    smallimg[17].onclick = function() {
+        mainimg5.src = smallimg[17].src;
+    }
+    smallimg[18].onclick = function() {
+        mainimg5.src = smallimg[18].src;
+    }
+    smallimg[19].onclick = function() {
+        mainimg5.src = smallimg[19].src;
+    }
+
+    // Sixth Product (boots)
+    smallimg[20].onclick = function() {
+        mainimg6.src = smallimg[20].src;
+    }
+    smallimg[21].onclick = function() {
+        mainimg6.src = smallimg[21].src;
+    }
+    smallimg[22].onclick = function() {
+        mainimg6.src = smallimg[22].src;
+    }
+    smallimg[23].onclick = function() {
+        mainimg6.src = smallimg[23].src;
+    }
 }
 
 
@@ -193,7 +253,7 @@ let carts = document.querySelectorAll('.add-cart');
 
 let products = [
     {
-        name: 'SHOEI X-15',
+        name: 'SHOEI X-14',
         tag: 'race helm',
         price: '1000',
         inCart: 0
@@ -205,9 +265,27 @@ let products = [
         inCart: 0
     },
     {
-        name: 'retro',
+        name: 'SHOEI J.O.',
         tag: 'retro helm',
         price: '450',
+        inCart: 0
+    },
+    {
+        name: 'Klim Baja S4',
+        tag: 'glove',
+        price: '167',
+        inCart: 0
+    },
+    {
+        name: 'Klim Badlands Pro',
+        tag: 'jacket',
+        price: '1500',
+        inCart: 0
+    },
+    {
+        name: 'AlpineStars Tech 7',
+        tag: 'boot',
+        price: '599',
         inCart: 0
     },
 ]
@@ -355,7 +433,7 @@ if (window.location.href.includes("cartPage.html")) {
     function clearLocalStorage() {
         localStorage.clear();
         location.reload();
-        alert("Local Storage cleared successfully!");
+        alert("Cart cleared successfully!");
     }
 }
 
