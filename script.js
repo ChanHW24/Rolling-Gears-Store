@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
             let contactEmail = document.getElementById("contact-email").value;
             let contactText = document.getElementById("contact-text").value;
 
+            // Store Email into localStorage
+            localStorage.setItem('email', contactEmail);
+            console.log(localStorage);
+
             //Get form value
             let jsondata = {
                 "email": contactEmail,
@@ -77,6 +81,22 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(response => {
             console.log('response', response);
+
+            let email = localStorage.getItem('email');
+            console.log('email', email);
+
+            let found = false;
+            for (let i = 0; i < response.length; i++) {
+                if (response[i].email === email) {
+                    found = true;
+                    console.log('found', response[i]);
+                    
+                    document.getElementById('name').innerHTML = response[i].name;
+                    document.getElementById('number').innerHTML = response[i].number;
+                    document.getElementById('email').innerHTML = response[i].email;
+                    document.getElementById('password').innerHTML = response[i].password;
+                }
+            }
         }
     )};
     
@@ -115,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Make the API call to signup
             fetch("https://rollinggearstore-6adf.restdb.io/rest/login-signup", settings)
                 .then(response => {
-                    if (!response.ok) throw new Error('Make sure all fields are filled out correctly. And leave no spacing for your contact number.');
+                    if (!response.ok) throw new Error('Make sure all fields are filled out correctly. And leave no spacing for your contact number. Please try again.');
                     return response.json();
                 })
                 .then(response => {
@@ -473,6 +493,10 @@ if (window.location.href.includes("profile.html")) {
 
     generateRandomNumber();
 }
+
+
+
+// Store Login Inputs in localStorage
 
 
 // Profile dynamic information
