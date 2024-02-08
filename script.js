@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (matchingUser) {
                     console.log('Login successful');
                     // Display a successful message to the user
-                    if (document.getElementById("contact-email").value == "ain@ain.com") {
+                    if (document.getElementById("contact-email").value == "ain@gmail.com") {
                         window.location.href = "profile(ain).html";
                     } else {
                         window.location.href = "profile.html";
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Make the API call to signup
             fetch("https://rollinggearsstore-124c.restdb.io/rest/login-signup", settings)
                 .then(response => {
-                    if (!response.ok) throw new Error('Make sure all fields are filled out correctly. And leave no spacing for your contact number. Please try again.');
+                    if (!response.ok) throw new Error('Make sure all fields are filled up correctly. Do not start off with a 0 and leave no spacing for your contact number. Please try again.');
                     return response.json();
                 })
                 .then(response => {
@@ -145,6 +145,50 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById('number').innerHTML = response[i].number;
                     document.getElementById('email').innerHTML = response[i].email;
                     document.getElementById('password').innerHTML = response[i].password;
+
+                    if (email == "24@gmail.com") {
+                        // Get the container element
+                        let container = document.getElementById("imageContainer");
+
+                        // Create an image element
+                        let img = document.createElement("img");
+
+                        // Set the source and other attributes of the image
+                        img.src = "./images/loyalty card/Artboard 10.png";
+                        img.alt = "Image description";
+                        img.width = 1000;
+                        img.height = 800;
+
+                        // Set the image element as the value of the container
+                        container.innerHTML = img.outerHTML;
+                    } else if (email == "natalie@gmail.com") {
+                        // Get the container element
+                        let container = document.getElementById("imageContainer");
+
+                        // Create an image element
+                        let img = document.createElement("img");
+
+                        // Set the source and other attributes of the image
+                        img.src = "./images/loyalty card/Artboard 11.png";
+                        img.alt = "Image description";
+
+                        // Set the image element as the value of the container
+                        container.innerHTML = img.outerHTML;
+                    } else {
+                        // Get the container element
+                        let container = document.getElementById("imageContainer");
+
+                        // Create an image element
+                        let img = document.createElement("img");
+
+                        // Set the source and other attributes of the image
+                        img.src = "./images/loyalty card/Artboard 1.png";
+                        img.alt = "Image description";
+
+
+                        // Set the image element as the value of the container
+                        container.innerHTML = img.outerHTML;
+                    };
                 };
             };
         }
@@ -487,21 +531,14 @@ if (window.location.href.includes("cartPage.html")) {
 // random number function
 if (window.location.href.includes("profile.html")) {
     function generateRandomNumber() {
-        var minNumber = 100000; // The minimum number you want
-        var maxNumber = 10000000000; // The maximum number you want
+        var minNumber = 1000000; // The minimum number you want
+        var maxNumber = 1999999; // The maximum number you want
         var randomnumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber; // Generates random number
         document.getElementById("random").innerHTML = randomnumber; // Displays the random number
     }
 
     generateRandomNumber();
 }
-
-
-
-// Store Login Inputs in localStorage
-
-
-// Profile dynamic information
 
 
 
